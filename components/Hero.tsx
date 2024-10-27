@@ -57,12 +57,12 @@ const Hero = () => {
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Tic Tac Toe
+            - - -
           </p>
 
           <a href="#about">
             <MagicButton
-              title="Show my work"
+              title="Show my Resume"
               icon={<FaLocationArrow />}
               position="right"
             />

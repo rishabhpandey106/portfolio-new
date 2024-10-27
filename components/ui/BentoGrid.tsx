@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect  } from "react";
+import { useState, useRef, useEffect } from "react";
 import { IoCopyOutline, IoSend } from "react-icons/io5";
 
 
@@ -11,6 +11,10 @@ import { FaUser } from "react-icons/fa";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
 import { BackgroundGradientAnimation } from "./GradientBg";
+import { social } from "@/data";
+import Link from "next/link";
+import { FlipWords } from "./FlipWords";
+
 // import GridGlobe from "./GridGlobe";
 
 export const BentoGrid = ({
@@ -56,10 +60,12 @@ export const BentoGridItem = ({
   const leftLists = ["Express", "Typescript", "NodeJS"];
   const rightLists = ["NextJS", "AI/ML", "GraphQL"];
   const middleLists = ["Hono", "Vercel", "MongoDB"];
+  const words = ["BackEnd Developer", "ML Engineer", "FrontEnd Developer", "Tech Enthusiast"];
 
   const [copied, setCopied] = useState(false);
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<{ user: string; bot: string }[]>([]);
+  const [loading, setLoading] = useState(false);
 
   const messageContainerRef = useRef<HTMLDivElement | null>(null);
 
@@ -67,9 +73,10 @@ export const BentoGridItem = ({
     e.preventDefault();
     if (input.trim()) {
       // Simulate a response from the chatbot
-    //   const newMessage = { user: input, bot: `You said: "${input}"` };
-    //   setMessages((prev) => [...prev, newMessage]);
-    //   setInput(""); // Clear input
+      const userMessage = { user: input, bot: "" };
+      setMessages((prev) => [...prev, userMessage]);
+      setInput(""); // Clear input
+      setLoading(true);
     console.log(input)
       try {
         // Make API call to your chatbot backend
@@ -90,15 +97,21 @@ export const BentoGridItem = ({
         console.log(data)
         
         // Assuming the response contains a "reply" field
-        const botMessage = { user: input, bot: data.answer }; // Adjust based on your API response structure
-        setMessages((prev) => [...prev, botMessage]);
-        setInput("");
+        const botMessage = { user: userMessage.user, bot: data.answer }; // Adjust based on your API response structure
+        // setMessages((prev) => [...prev, botMessage]);
+        setMessages((prev) => {
+          const newMessages = prev.slice(); // Copy existing messages
+          newMessages[newMessages.length - 1] = botMessage; // Replace the last message (loading message)
+          return newMessages;
+        });
 
       } catch (error) {
         console.error('Error fetching data:', error);
         const botMessage = { user: "", bot: "Sorry, there was an error." };
         setMessages((prev) => [...prev, botMessage]);
         setInput("");
+      } finally {
+        setLoading(false);
       }
     }
   };
@@ -122,6 +135,10 @@ export const BentoGridItem = ({
     const text = "hsu@jsmastery.pro";
     navigator.clipboard.writeText(text);
     setCopied(true);
+  };
+
+  const handleClick = (link: any) => {
+    window.open(link, "_blank");
   };
 
   return (
@@ -188,8 +205,28 @@ export const BentoGridItem = ({
             {title}
           </div>
 
+          {id === 1 && (
+            <div className="w-fit items-center md:gap-3 gap-3 grid lg:grid-cols-3">
+              <FlipWords words={words} className="text-5xl font-semibold" /> <br />
+            </div>
+          )}
           {/* for the github 3d globe */}
           {/* {id === 2 && <GridGlobe />} */}
+
+          {id === 2 && (
+            <div className="w-fit items-center md:gap-3 gap-3 grid lg:grid-cols-3">
+              {social.map((info) => (
+                <MagicButton
+                key={info.id}
+                title={info.name}
+                icon={info.img}
+                position="risky"
+                handleClick={() => handleClick(info.link)}
+                otherClasses="!bg-[#161A31]"
+              />
+              ))}
+            </div>
+          )}
 
           {/* Tech stack list div */}
           {id === 3 && (
@@ -249,7 +286,7 @@ export const BentoGridItem = ({
                         <span>{ msg.user}</span> 
                         </div>
                         <div className="text-gray-300 pl-[24px]">
-                        {msg.bot}
+                        {msg.bot || (loading && index === messages.length - 1 ? "Loading..." : null)}
                         </div>
                     </div>
                     ))
