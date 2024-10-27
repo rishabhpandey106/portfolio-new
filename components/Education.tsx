@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { Timeline } from "@/components/ui/Timeline";
@@ -10,7 +10,7 @@ export function Education() {
       content: (
         <div>
           <p className="text-white-100  text-xs md:text-3xl font-normal mb-8">
-            Enrolled for Master's Programme in Artificial Intelligence.
+            Enrolled for Master&apos;s Programme in Artificial Intelligence.
           </p>
           <p className="text-white-800  text-xs md:text-2xl font-normal mb-8">
             NSUT, Delhi
@@ -23,7 +23,7 @@ export function Education() {
       content: (
         <div>
           <p className="text-white-100  text-xs md:text-3xl font-normal mb-8">
-          Enrolled for Bachelor's Programme in CSE.
+          Enrolled for Bachelor&apos;s Programme in CSE.
           </p>
           <p className="text-white-800  text-xs md:text-2xl font-normal mb-8">
             AKTU, Ghaziabad

@@ -12,7 +12,7 @@ import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import { social } from "@/data";
-import Link from "next/link";
+// import Link from "next/link";
 import { FlipWords } from "./FlipWords";
 
 // import GridGlobe from "./GridGlobe";

@@ -5,7 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "./provider";
 
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",

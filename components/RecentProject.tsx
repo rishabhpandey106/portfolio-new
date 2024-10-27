@@ -1,6 +1,6 @@
 "use client";
 
-import { FaLocationArrow } from "react-icons/fa6";
+// import { FaLocationArrow } from "react-icons/fa6";
 import Link from "next/link";
 import Image from "next/image";
 import { projects } from "@/data";
