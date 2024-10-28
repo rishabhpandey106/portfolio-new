@@ -58,7 +58,7 @@ export const BentoGridItem = ({
   spareImg?: string;
 }) => {
   const leftLists = ["Express", "Typescript", "NodeJS"];
-  const rightLists = ["NextJS", "AI/ML", "GraphQL"];
+  const rightLists = ["Cloudflare", "AI/ML", "NextJS"];
   const middleLists = ["Hono", "Vercel", "MongoDB"];
   const words = ["BackEnd Developer", "ML Engineer", "FrontEnd Developer", "Tech Enthusiast"];
 

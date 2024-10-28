@@ -37,8 +37,8 @@ const RecentProjects = () => {
                     <CardItem translateZ="100" className="w-full mt-4">
                     <Image
                         src={item.img}
-                        height="200"
-                        width="200"
+                        height="300"
+                        width="400"
                         className="h-fit w-fit object-cover rounded-xl group-hover/card:shadow-xl"
                         alt="thumbnail"
                     />

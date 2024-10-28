@@ -40,8 +40,8 @@ export const navItems = [
     },
     {
       id: 4,
-      title: "Tech enthusiast with a passion for development.",
-      description: "",
+      title: "Code Quotient",
+      description: "Last worked for",
       className: "lg:col-span-2 md:col-span-3 md:row-span-1",
       imgClassName: "",
       titleClassName: "justify-start",
@@ -74,27 +74,27 @@ export const navItems = [
   export const projects = [
     {
       id: 1,
-      title: "3D Solar System Planets to Explore",
-      des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-      img: "/p1.svg",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-      href: "/ui.earth.com",
+      title: "Omni-API",
+      des: "Built a high-performance API showcasing rapid data retrieval for real-time applications.",
+      img: "/project1.png",
+      iconLists: ["/redis.svg", "/next.svg", "/pgsql.svg", "/cloudflare.svg", "/prisma.svg"],
+      href: "https://github.com/rishabhpandey106/omni-api",
     },
     {
       id: 2,
-      title: "Yoom - Video Conferencing App",
-      des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-      img: "/p2.svg",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-      href: "/ui.yoom.com",
+      title: "Galeech-API",
+      des: "It provides fast and accurate detection of Hindi profanity, ensuring a cleaner and more respectful online environment.",
+      img: "/project2.gif",
+      iconLists: ["/next.svg", "/cloudflare.svg", "/ts.svg", "/nodejs.svg", "/tail.svg"],
+      href: "https://github.com/rishabhpandey106/galeech-api",
     },
     {
       id: 3,
-      title: "AI Image SaaS - Canva Application",
+      title: "Cypher",
       des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
       img: "/p3.svg",
       iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-      href: "/ui.aiimg.com",
+      href: "https://github.com/rishabhpandey106/cypher",
     },
     {
       id: 4,
@@ -102,7 +102,7 @@ export const navItems = [
       des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
       img: "/p4.svg",
       iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-      href: "/ui.apple.com",
+      href: "https://github.com/rishabhpandey106/",
     },
   ];
   
@@ -195,16 +195,16 @@ export const navItems = [
     {
       id: 3,
       img: "/link.svg",
-      link: "https://www.linkedin.com/",
+      link: "https://www.linkedin.com/in/rishabh-kumar-pandey-954b1a201/",
     },
   ];
 
   export const social = [
-    { id: 1, name: "GitHub", link: "https://github.com/yourprofile", img: "" },
-    { id: 2, name: "Twitter", link: "https://twitter.com/yourprofile", img: "" },
-    { id: 3, name: "LinkedIn", link: "https://leetcode.com/yourprofile", img: "" },
-    { id: 4, name: "LeetCode", link: "https://leetcode.com/yourprofile", img: "" },
-    { id: 5, name: "Medium", link: "https://medium.com/yourprofile", img: "" },
-    { id: 6, name: "CodeChef", link: "https://codechef.com/yourprofile", img: "" },
+    { id: 1, name: "GitHub", link: "https://github.com/rishabhpandey106", img: "" },
+    { id: 2, name: "Twitter", link: "https://twitter.com/18Rishabh", img: "" },
+    { id: 3, name: "LinkedIn", link: "https://www.linkedin.com/in/rishabh-kumar-pandey-954b1a201/", img: "" },
+    { id: 4, name: "LeetCode", link: "https://leetcode.com/uncle_salmon", img: "" },
+    { id: 5, name: "Medium", link: "https://medium.com/@rishabhpandey230", img: "" },
+    { id: 6, name: "CodeChef", link: "https://codechef.com/uncle_salmon", img: "" },
     // Add more social media links as needed
   ]
