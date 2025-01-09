@@ -90,19 +90,19 @@ export const navItems = [
     },
     {
       id: 3,
-      title: "Cypher",
-      des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-      img: "/p3.svg",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+      title: "Ragdoll",
+      des: "It is an innovative project that leverages AI to allow users to engage in conversations with any website.",
+      img: "/project3.gif",
+      iconLists: ["/next.svg", "/vercel.svg", "/ts.svg", "/ai.svg", "/redis.svg"],
       href: "https://github.com/rishabhpandey106/cypher",
     },
     {
       id: 4,
-      title: "Animated Apple Iphone 3D Website",
-      des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-      img: "/p4.svg",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-      href: "https://github.com/rishabhpandey106/",
+      title: "SoulSync",
+      des: "Created a playlist generator powered by AI that syncs with your taste and seamlessly integrates with spotify.",
+      img: "/project4.gif",
+      iconLists: ["/vite.svg", "/ai.svg", "/ts.svg", "/python.svg", "/flask.svg"],
+      href: "https://github.com/rishabhpandey106/soulsync",
     },
   ];
   
