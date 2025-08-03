@@ -105,6 +105,11 @@ export const BentoGridItem = ({
           return newMessages;
         });
 
+        if (data.audio_url) {
+        const audio = new Audio(`https://rizzup-bot.onrender.com${data.audio_url}`);
+        audio.play().catch(err => console.error('Audio playback error:', err));
+      }
+
       } catch (error) {
         console.error('Error fetching data:', error);
         const botMessage = { user: "", bot: "Sorry, there was an error." };
